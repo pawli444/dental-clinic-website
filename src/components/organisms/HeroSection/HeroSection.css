@@ -1,0 +1,57 @@
+.heroSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.photo-wrapper{
+  position: relative;
+}
+
+.hero-overlay{
+    background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7) 10%,
+    rgba(0,0,0,0) 60%
+  );
+  position: absolute;
+  inset: 0;
+}
+
+
+.hero-text{
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 0.5rem 1rem;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+
+
+.dots-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.dot{
+  padding: 0 0.25rem 0.5rem 0.25rem;
+  margin: 1rem 0.2rem 1rem 0.2rem;
+  cursor: pointer;
+  border: 1px blue solid;
+  border-radius: 60%;
+  background-color: black;
+}
+
+.dot:hover{
+  background-color: #d4a853;
+}
+
+.dot.active {
+  background-color: white;
+  transform: scale(1.2);
+}

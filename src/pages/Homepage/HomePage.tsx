@@ -1,13 +1,13 @@
+import "./HomePage.css"
 
-
-
+import HeroSection from "../../components/organisms/HeroSection/HeroSection"
 
 
 function HomePage(){
 
     return(
         <>
-        aaa
+        <HeroSection/>
         </>
     )
 }
