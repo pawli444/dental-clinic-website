@@ -7,6 +7,9 @@ import photo2 from "../../../assets/hero/teeth-dentist-mouth.jpg"
 import photo3 from "../../../assets/hero/two-bamboo-toothbrushes-white.jpg"
 import photo4 from "../../../assets/hero/woman-on-chair.jpg"
 
+import arrow from "../../../assets/hero/arrow.png"
+import arrowBlank from "../../../assets/hero/arrow-blank.png"
+
 function Hero(){
 
     const [photoID, setPhotoID] = useState<number>(0);
@@ -20,7 +23,7 @@ function Hero(){
      { photo: photo4, text: "text4" },
     ];
 
-    const intervalRef = useRef<NodeJS.Timeout | null>(null);
+    const intervalRef = useRef<number  | null>(null);
 
     const startInterval = () => {
        
@@ -48,16 +51,44 @@ function Hero(){
         startInterval(); 
     };
 
+    const handleArrowClick = (next: boolean) => {
+        setPhotoID(prev => {
+            if (next) {
+                return prev < heroPhotos.length - 1 ? prev + 1 : 0;
+            } else {
+                return prev === 0 ? heroPhotos.length - 1 : prev - 1;
+            }
+        });
+
+        startInterval();
+    };
+
+    
+
+    const [showArrow, setShowArrow] = useState<boolean>(false);
+
+
     return(
 
         <>
             <section className="heroSection">
 
-              <div className="photo-wrapper">
+              <div className="photo-wrapper"
+              onMouseEnter={()=>setShowArrow(true)}
+              onMouseLeave={()=>setShowArrow(false)}
+              >
 
-                <img src={heroContent[photoID].photo} />
+               <img src={arrow} className={`hero-arrow left ${showArrow === true ? "active" : ""}`} onClick={() => handleArrowClick(false)}
+                onMouseEnter={e => e.currentTarget.src = arrowBlank}
+                onMouseLeave={e => e.currentTarget.src = arrow}/>
+
+                <img className="hero-photo" src={heroContent[photoID].photo} />
 
                 <div className="hero-overlay"/>
+
+                <img src={arrow} className={`hero-arrow right ${showArrow === true ? "active" : ""}`} onClick={() => handleArrowClick(true)} 
+                onMouseEnter={e => e.currentTarget.src = arrowBlank}
+                onMouseLeave={e => e.currentTarget.src = arrow}/>
 
                 <p className="hero-text">
                     {heroContent[photoID].text}
