@@ -1,0 +1,83 @@
+.ContactSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    white 70%,
+    #0f4c5c 70%
+  );
+  box-shadow: #0f4c5c;
+  border: 3px solid #0f4c5c;
+  border-radius: 40px;
+}
+
+.title-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.contact-title{
+    font-size: 2.3rem;
+    color: #0f4c5c;
+    font-weight: bold;
+}
+
+
+.contact-info-wrapper {
+  display: flex;
+  width: 100%;
+  height: 400px;
+}
+
+.info-box {
+  flex: 1;
+  padding: 2rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.info-box li{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.25rem;
+    margin: 0.5rem 0;
+}
+
+.info-box h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0f4c5c;
+  font-weight: 600;
+}
+
+.info-box p {
+  font-size: 1rem;
+  color: #1c1b19;
+}
+
+.info-box li + li {
+  border-top: 1px solid #0f4d5c8c;
+}
+
+.maps-box {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 0 40px 40px 0;
+}
+
+.maps-box iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+

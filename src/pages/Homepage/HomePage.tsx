@@ -3,6 +3,7 @@ import "./HomePage.css"
 import HeroSection from "../../components/organisms/HeroSection/HeroSection"
 import ServicesSection from "../../components/organisms/ServicesSection/ServicesSection";
 import AboutSection from "../../components/organisms/AboutSection/AboutSection";
+import ContactSection from "../../components/organisms/ContactSection/ContactSection";
 
 function HomePage(){
 
@@ -11,6 +12,7 @@ function HomePage(){
         <HeroSection/>
         <ServicesSection/>
         <AboutSection/>
+        <ContactSection/>
         </>
     )
 }
