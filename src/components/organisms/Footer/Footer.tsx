@@ -1,14 +1,19 @@
 
-
+import "./Footer.css"
 
 
 
 
 function Footer(){
 
+    const text = import.meta.env.VITE_REGISTERED|| ''
+
     return(
         <>
-        aaa
+        <section className="footerSection">
+
+          <p> {text} </p> 
+        </section>
         </>
     )
 }

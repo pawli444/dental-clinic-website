@@ -1,0 +1,10 @@
+.footerSection{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color:#1a2b5e;
+    font-weight: bold;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding: 0.5rem 1rem;
+    color: white;
+}
