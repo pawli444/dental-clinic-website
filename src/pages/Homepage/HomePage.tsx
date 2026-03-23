@@ -1,6 +1,7 @@
 import "./HomePage.css"
 
 import HeroSection from "../../components/organisms/HeroSection/HeroSection"
+import ServicesSection from "../../components/organisms/ServicesSection/ServicesSection";
 
 
 function HomePage(){
@@ -8,6 +9,7 @@ function HomePage(){
     return(
         <>
         <HeroSection/>
+        <ServicesSection/>
         </>
     )
 }
