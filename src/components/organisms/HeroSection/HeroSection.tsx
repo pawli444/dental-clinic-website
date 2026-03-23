@@ -13,27 +13,28 @@ import arrowBlank from "../../../assets/hero/arrow-blank.png"
 function Hero(){
 
     const [photoID, setPhotoID] = useState<number>(0);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [nextPhotoID, setNextPhotoID] = useState<number | null>(null);
 
     const heroPhotos = [photo1, photo2, photo3, photo4];
 
     const heroContent = [
-     { photo: photo1, text: "text1" },
-     { photo: photo2, text: "text2" },
-     { photo: photo3, text: "text3" },
-     { photo: photo4, text: "text4" },
-    ];
+    { photo: photo1, text: "Twój zdrowy uśmiech zaczyna się tutaj" },
+    { photo: photo2, text: "Profesjonalna opieka w przyjaznej atmosferze" },
+    { photo: photo3, text: "Nowoczesne leczenie bez bólu i stresu" },
+    { photo: photo4, text: "Zadbaj o uśmiech całej rodziny" },
+    ]
 
     const intervalRef = useRef<number  | null>(null);
 
     const startInterval = () => {
-       
         if (intervalRef.current) clearInterval(intervalRef.current);
-
-       
         intervalRef.current = setInterval(() => {
-            setPhotoID(prev =>
-                prev < heroContent.length - 1 ? prev + 1 : 0
-            );
+            setPhotoID(prev => {
+                const newID = prev < heroContent.length - 1 ? prev + 1 : 0;
+                handlePhotoChange(newID);
+                return prev; 
+            });
         }, 5000);
     };
 
@@ -46,8 +47,19 @@ function Hero(){
         };
     }, []);
 
+    const handlePhotoChange = (newPhotoID: number) => {
+        setNextPhotoID(newPhotoID);
+        setIsLoading(true);
+    };
+
+    const handlePhotoLoad = () => {
+        setPhotoID(nextPhotoID ?? photoID);
+        setIsLoading(false);
+        setNextPhotoID(null);
+    };
+
     const handleDotClick = (index: number) => {
-        setPhotoID(index);
+        handlePhotoChange(index);
         startInterval(); 
     };
 
@@ -82,7 +94,12 @@ function Hero(){
                 onMouseEnter={e => e.currentTarget.src = arrowBlank}
                 onMouseLeave={e => e.currentTarget.src = arrow}/>
 
-                <img className="hero-photo" src={heroContent[photoID].photo} />
+                <img 
+                    className={`hero-photo ${isLoading ? 'loading' : 'loaded'}`}
+                    src={heroContent[nextPhotoID ?? photoID].photo}
+                    onLoad={handlePhotoLoad}
+                    alt={heroContent[nextPhotoID ?? photoID].text}
+                />
 
                 <div className="hero-overlay"/>
 
