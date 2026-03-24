@@ -1,7 +1,7 @@
 import "./ServiceCard.css"
 import type { Service } from "../../../types/index"
 
-function ServiceCard({ name, description, imageURL }: Service){
+function ServiceCard({ name, description, imageURL}: Service){
   return (
     <div className="card-box">
       <div className="card-image-wrapper">

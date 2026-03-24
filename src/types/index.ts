@@ -5,3 +5,9 @@ export interface Service {
   imageURL: string
 }
 
+export interface ExtendedService extends Service {
+  longDescription: string
+  scope: string[]
+  why: string
+  forWho: string
+}

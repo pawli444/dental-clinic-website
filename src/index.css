@@ -1,2 +1,13 @@
 @import "tailwindcss";
 
+:root {
+  --navbar-height: 70px; 
+}
+
+.navbar {
+  height: var(--navbar-height);
+}
+
+.hero {
+  min-height: calc(100dvh - var(--navbar-height));
+}
