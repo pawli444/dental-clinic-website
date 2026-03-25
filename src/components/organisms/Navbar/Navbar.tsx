@@ -11,12 +11,24 @@ function Navbar(){
             <NavLink to="/">
                <img src={logo} alt={clinicName} />
             </NavLink>
-            <ul>
-                <li role="button"><NavLink to="/" alt="logo">Home</NavLink></li>
-                <li role="button"><NavLink to="/uslugi">Usługi</NavLink></li>
-                <li role="button"><NavLink to="/kontakt">Kontakt</NavLink></li>
-                <li role="button"><NavLink to="/kontakt" className="btn-primary">Umów wizytę</NavLink></li>
-            </ul>
+        <ul>
+            <NavLink to="/">
+                <li role="button">Home</li>
+            </NavLink>
+
+            <NavLink to="/uslugi">
+                <li role="button">Usługi</li>
+            </NavLink>
+
+            <NavLink to="/kontakt">
+                <li role="button">Kontakt</li>
+            </NavLink>
+
+            <NavLink to="/kontakt" className="btn-primary">
+                <li role="button">Umów wizytę</li>
+            </NavLink>
+        </ul>
+
         </nav>
     )
 }

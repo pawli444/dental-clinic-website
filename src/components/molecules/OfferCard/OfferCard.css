@@ -1,0 +1,90 @@
+
+
+.offercard-box{
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1 px solid blue;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-bottom: 5rem;
+    margin-top: 3rem;;
+    
+}
+
+.offercard-box.left{
+    flex-direction: row;
+}
+
+.offercard-box.right{
+    flex-direction: row-reverse;
+}
+
+
+.offercard-box img{
+    height: 550px;
+    width: 400px;
+    flex:1;
+    padding: 2rem;
+}
+
+.offer-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex:1;
+    padding: 2rem;
+}
+
+.offer-content-wrapper h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.longDescription{
+    color: rgba(0, 0, 0, 0.616);
+}
+
+.scope-items{
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.scope-items li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    margin: 0.4rem;
+    border-radius: 3rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.144);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    
+}
+
+.scope-items li:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
+    transform: translateY(-2px);
+}
+
+.scope-items p{
+    padding: 0.5rem;
+}
+
+.offer-questions{
+    padding: 2rem;
+}
+
+.offer-questions h3{
+    font-weight: 500;   
+}
+
+.offer-questions p{
+    color: rgba(0, 0, 0, 0.616);
+    
+}

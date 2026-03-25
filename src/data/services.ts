@@ -30,9 +30,8 @@ export const extendedServices: ExtendedService[] = [
     longDescription: "Regularna profilaktyka to podstawa zdrowego i pięknego uśmiechu. Dzięki systematycznym wizytom kontrolnym możliwe jest wykrycie zmian na wczesnym etapie oraz uniknięcie bardziej skomplikowanego leczenia.",
     scope: [
       "przeglądy stomatologiczne",
-      "usuwanie kamienia nazębnego (skaling)",
-      "piaskowanie i polerowanie zębów",
-      "fluoryzacja",
+      "usuwanie kamienia nazębnego",
+      "piaskowanie zębów",
       "instruktaż higieny jamy ustnej"
     ],
     why: "Profilaktyka pozwala zapobiegać próchnicy i chorobom dziąseł oraz utrzymać zdrowy uśmiech przez długie lata.",
@@ -81,7 +80,6 @@ export const extendedServices: ExtendedService[] = [
       "wizyty adaptacyjne",
       "leczenie próchnicy u dzieci",
       "lakowanie",
-      "fluoryzacja",
       "edukacja higieny"
     ],
     why: "Wczesna profilaktyka i leczenie pomagają uniknąć problemów w przyszłości.",
