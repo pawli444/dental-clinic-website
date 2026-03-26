@@ -9,7 +9,9 @@ function OfferCard({ id, name, description, imageURL, longDescription, scope, wh
         <>
             <div className={`offercard-box ${id%2==0 ? "right" : "left"}`}>
                 
-                <img src={imageURL} alt={description}/>
+                <div className="offer-img-box">
+                    <img src={imageURL} alt={description}/>
+                </div>
 
                 <div className="offer-content-wrapper">
 

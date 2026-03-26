@@ -5,6 +5,13 @@ import services2 from "../assets/services/dentist-jaw.jpg"
 import services3 from "../assets/services/service-teeth.jpg"
 import services4 from "../assets/services/service-child.jpg"
 
+import offerProfilaktyka from "../assets/offer/profilaktyka.jpg"
+import offerLeczenie from "../assets/offer/leczenie-zachowawcze.jpg"
+import offerProtetyka from "../assets/offer/protetyka.jpg"
+import offerDzieci from "../assets/offer/stomatologia-dziecieca.jpg"
+import offerHigienizacja from "../assets/offer/higienizacja.jpg"
+import offerKonsultacje from "../assets/offer/konsultacje.jpg"
+
 
 const services: Service[] = [
   { id: 1, name: "Profilaktyka", description: "Regularne przeglądy, fluoryzacja i profesjonalne czyszczenie zębów.", imageURL: services1 },
@@ -36,7 +43,7 @@ export const extendedServices: ExtendedService[] = [
     ],
     why: "Profilaktyka pozwala zapobiegać próchnicy i chorobom dziąseł oraz utrzymać zdrowy uśmiech przez długie lata.",
     forWho: "Dla dzieci i dorosłych, którzy chcą zadbać o zdrowie swoich zębów.",
-    imageURL: services1
+    imageURL: offerProfilaktyka
   },
 
   {
@@ -52,7 +59,7 @@ export const extendedServices: ExtendedService[] = [
     ],
     why: "Szybka reakcja pozwala uniknąć poważniejszych problemów i bardziej zaawansowanego leczenia.",
     forWho: "Dla osób z bólem, nadwrażliwością lub widocznymi ubytkami.",
-    imageURL: services2
+    imageURL: offerLeczenie
   },
 
   {
@@ -68,7 +75,7 @@ export const extendedServices: ExtendedService[] = [
     ],
     why: "Uzupełnienie braków w uzębieniu poprawia komfort życia i zapobiega dalszym problemom zdrowotnym.",
     forWho: "Dla osób z brakami w uzębieniu lub zębami wymagającymi odbudowy.",
-    imageURL: services3
+    imageURL: offerProtetyka
   },
 
   {
@@ -84,7 +91,7 @@ export const extendedServices: ExtendedService[] = [
     ],
     why: "Wczesna profilaktyka i leczenie pomagają uniknąć problemów w przyszłości.",
     forWho: "Dla dzieci oraz rodziców dbających o zdrowie swoich pociech.",
-    imageURL: services4
+    imageURL: offerDzieci
   },
 
   {
@@ -100,7 +107,7 @@ export const extendedServices: ExtendedService[] = [
     ],
     why: "Regularne zabiegi pomagają utrzymać świeży oddech i zapobiegają chorobom dziąseł.",
     forWho: "Dla osób, które chcą zadbać o estetykę i higienę jamy ustnej.",
-    imageURL: services1
+    imageURL: offerHigienizacja
   },
 
   {
@@ -116,7 +123,7 @@ export const extendedServices: ExtendedService[] = [
     ],
     why: "Dokładna diagnoza pozwala dobrać najlepsze i najbardziej skuteczne rozwiązania.",
     forWho: "Dla każdego, kto chce sprawdzić stan swojego uzębienia lub zaplanować leczenie.",
-    imageURL: services2
+    imageURL: offerKonsultacje
   }
 ];
 
