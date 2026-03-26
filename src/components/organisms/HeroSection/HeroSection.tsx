@@ -2,6 +2,11 @@ import "./HeroSection.css"
 import mainPhoto from "../../../assets/hero/woman-on-chair.jpg"
 import doctor from "../../../assets/hero/dentist-tools.jpg"
 
+import testmainPhoto from "../../../assets/hero/woman-on-chair.webp"
+
+import test from "../../../assets/hero/test.webp"
+import test2 from "../../../assets/hero/dentist-tools2.webp"
+
 function Hero() {
   return (
     <section className="hero">
@@ -24,11 +29,11 @@ function Hero() {
 
       <div className="hero-right">
         <div className="main-circle">
-          <img src={mainPhoto} />
+          <img src={test} />
         </div>
 
         <div className="small-circle">
-          <img src={doctor} />
+          <img src={test2} />
         </div>
 
         <div className="badge">

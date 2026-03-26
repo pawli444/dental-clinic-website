@@ -93,3 +93,126 @@
   border-radius: 12px;
   font-size: 1rem;
 }
+
+
+
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 5%;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-left h1 {
+    font-size: 3.9rem;
+  }
+
+  .hero-left p {
+    font-size: 1.7rem;
+  }
+
+  .hero-right {
+    margin-top: 6.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 80px; 
+  }
+
+  .main-circle {
+    width: 440px;
+    height: 440px;
+  }
+
+  .small-circle {
+    width: 230px;
+    height: 230px;
+    top: -30px;     
+    left: 250px;
+  }
+
+  .badge {
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 1rem 1.4rem;
+
+    font-size: 1.4rem;
+  }
+
+  .cta{
+    background: #e53935;
+    border: none;
+    padding: 1.6rem 1.6rem;
+    font-size: 1.4rem;
+
+
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 5%;
+    gap: 4rem;
+  }
+
+  .hero-left {
+    max-width: 100%;
+    margin-top: 3rem;
+  }
+
+  .hero-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    
+  }
+
+  .main-circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .small-circle {
+    width: 120px;
+    height: 120px;
+    top: -25px;
+    left: -20px;
+  }
+
+  .badge {
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 0.85rem;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .main-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .small-circle {
+    width: 90px;
+    height: 90px;
+    top: -20px;
+    left: -10px;
+  }
+}

@@ -27,6 +27,7 @@
     flex:1;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .offercard-box img{
@@ -93,4 +94,48 @@
 .offer-questions p{
     color: rgba(0, 0, 0, 0.616);
     
+}
+
+@media (max-width: 1024px) {
+  .offercard-box img {
+    height: 400px;
+    width: 350px;
+    align-self: center;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .offercard-box,
+  .offercard-box.left,
+  .offercard-box.right {
+    flex-direction: column;
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+  }
+
+  .offercard-box img {
+    height: 260px;
+    width: 100%;
+    padding: 1rem;
+    
+  }
+
+  .offer-img-box {
+    width: 100%;
+    
+  }
+
+  .offer-content-wrapper {
+    padding: 1rem;
+  }
+
+  .scope-items {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-questions {
+    padding: 1rem;
+  }
 }

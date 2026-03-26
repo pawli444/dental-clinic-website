@@ -5,12 +5,14 @@ import services2 from "../assets/services/dentist-jaw.jpg"
 import services3 from "../assets/services/service-teeth.jpg"
 import services4 from "../assets/services/service-child.jpg"
 
-import offerProfilaktyka from "../assets/offer/profilaktyka.jpg"
-import offerLeczenie from "../assets/offer/leczenie-zachowawcze.jpg"
-import offerProtetyka from "../assets/offer/protetyka.jpg"
-import offerDzieci from "../assets/offer/stomatologia-dziecieca.jpg"
-import offerHigienizacja from "../assets/offer/higienizacja.jpg"
-import offerKonsultacje from "../assets/offer/konsultacje.jpg"
+import offerProfilaktyka from "../assets/offer/profilaktyka.webp"
+import offerLeczenie from "../assets/offer/leczenie-zachowawcze.webp"
+import offerProtetyka from "../assets/offer/protetyka.webp"
+import offerDzieci from "../assets/offer/stomatologia-dziecieca.webp"
+import offerHigienizacja from "../assets/offer/higienizacja.webp"
+import offerKonsultacje from "../assets/offer/konsultacje.webp"
+
+
 
 
 const services: Service[] = [

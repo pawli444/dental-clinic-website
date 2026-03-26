@@ -47,3 +47,26 @@
     gap: 5rem;
     
 }
+
+
+@media (max-width: 1024px) {
+  .cards-wrapper {
+    gap: 2rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .services-header {
+    margin-top: 3rem;
+  }
+
+  .services-header h2 {
+    font-size: 1.8rem;
+  }
+}

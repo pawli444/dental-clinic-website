@@ -17,7 +17,7 @@ function ServicesSection(){
             <div className="cards-wrapper">
 
                 {services.map((item) => (
-                    <Card key={item.id} name={item.name} description={item.description} imageURL={item.imageURL}/>
+                    <Card key={item.id} id={item.id} name={item.name} description={item.description} imageURL={item.imageURL}/>
                 ))}
             </div>
           </section>
