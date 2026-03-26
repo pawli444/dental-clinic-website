@@ -1,0 +1,153 @@
+.ContactFormSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ContactFormSection h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0f4c5c;
+  font-weight: 500;
+}
+
+
+
+.contact-form-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.09);
+  overflow: hidden; 
+}
+
+.contactForm {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-box label {
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.form-box input,
+.form-box textarea {
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #f9f9f9;
+}
+
+.form-box input:focus,
+.form-box textarea:focus {
+  border-color: #4a90d9;
+  background: #fff;
+}
+
+.form-box textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contactForm button[type="submit"] {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #4a90d9;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.contactForm button[type="submit"]:hover {
+  background-color: #2f74c0;
+}
+
+
+.contact-info-site {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  background: #f7f9fc; 
+  align-items: stretch; 
+  padding: 0;
+}
+
+
+.info-box--dark {
+  background: #06728d;
+  height: 100%;
+  margin: 0;
+  padding: 3rem 2rem;
+  border-radius: 0 12px 12px 0; 
+  list-style: none;
+}
+
+.info-box--dark h3 {
+  color: #7ecfdf;
+  font-size: 1rem;
+}
+
+.info-box--dark p {
+  color: #e8f4f7;
+  font-size: 1.05rem;
+  
+}
+
+.info-box--dark li + li {
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+
+.map-wrapper {
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.10);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+  display: block;
+}
+
+
+
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-info-site {
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+}
