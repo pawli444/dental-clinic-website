@@ -160,37 +160,119 @@
   }
 }
 
+@media (max-width: 920px) {
+
+  .small-circle {
+    top: 0px;
+    left: 100px;
+  }
+
+}
+
+
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
     text-align: center;
     padding: 3rem 5%;
-    gap: 4rem;
+    gap: 1rem;
   }
 
   .hero-left {
     max-width: 100%;
-    margin-top: 3rem;
+    margin-top: 1rem;
+  }
+
+  .hero-left h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-left p {
+    font-size: 1.1rem;
+  }
+
+  .cta {
+    padding: 0.9rem 1.6rem;
+    font-size: 1.1rem;
   }
 
   .hero-right {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
-    
+    padding-top: 30px;
+    padding-left: 50px;
+    margin-bottom: 2rem;
   }
 
   .main-circle {
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
+  }
+
+
+  .small-circle {
+    width: 170px;
+    height: 170px;
+    top: 0px;
+    left: 150px;
+  }
+
+  .badge {
+    bottom: -15px;
+    left: 50%;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+
+
+@media (max-width: 640px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 5%;
+    gap: 1rem;
+  }
+
+  .hero-left {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+  }
+
+  .cta {
+    padding: 0.9rem 1.6rem;
+    font-size: 1rem;
+  }
+
+  .hero-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-left: 50px;
+    margin-bottom: 2rem;
+  }
+
+  .main-circle {
+    width: 240px;
+    height: 240px;
   }
 
   .small-circle {
-    width: 120px;
-    height: 120px;
-    top: -25px;
-    left: -20px;
+    width: 130px;
+    height: 130px;
+    top: 0px;
+    left: 45px;
   }
 
   .badge {
@@ -199,20 +281,55 @@
     transform: translateX(-50%);
     white-space: nowrap;
     font-size: 0.85rem;
+    padding: 0.6rem 1rem;
   }
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 540px) {
+  .hero-left h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-right {
+    padding-left: 35px;
+  }
+
   .main-circle {
-    width: 220px;
-    height: 220px;
+    width: 230px;
+    height: 230px;
   }
 
   .small-circle {
-    width: 90px;
-    height: 90px;
-    top: -20px;
-    left: -10px;
+    width: 120px;
+    height: 120px;
+    top: 0px;
+    left: 87px;
   }
 }
+
+
+@media (max-width: 450px) {
+  .hero-left h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-right {
+    padding-left: 35px;
+  }
+
+  .main-circle {
+    width: 210px;
+    height: 210px;
+  }
+
+  .small-circle {
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 75px;
+  }
+}
+
+
+

@@ -96,6 +96,7 @@
   }
 
   .maps-box {
+    flex: none;
     background: #0f4c5c;  
     border-radius: 0;
     padding: 1.5rem;
