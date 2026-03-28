@@ -49,3 +49,67 @@
     cursor: pointer;
     
 }
+
+
+.hamburger {
+  display: none;
+  font-weight: bold;
+}
+
+@media (max-width: 640px) {
+
+  .nav-wrapper > ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .burger-menu{
+    display: none;
+  }
+  
+
+  .burger-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    z-index: 999;
+    width: 250px;
+    box-shadow: -4px 0 16px rgba(0,0,0,0.15);
+  }
+  
+.burger-menu.open ul {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+}
+
+.burger-menu.open li{
+    box-shadow: 0 2px 8px rgba(43, 22, 22, 0.308);
+    margin-bottom: 0.5rem;
+    
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 998; 
+}
+
+.close{
+    margin-top: 0.5rem;
+    opacity: 0.6;
+}
+
+
+}
