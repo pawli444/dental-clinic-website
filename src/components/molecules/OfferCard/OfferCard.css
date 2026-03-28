@@ -35,6 +35,11 @@
     width: 475px;
     padding: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.144);
+    transition: all 0.3s ease;
+}
+
+.offercard-box img:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.486);
 }
 
 .offer-content-wrapper{

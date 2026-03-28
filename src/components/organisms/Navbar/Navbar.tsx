@@ -44,12 +44,13 @@ function Navbar(){
             { menuOpen &&
             <>
             <div className="overlay" onClick={() => setMenuOpen(false)} />
+            </>
+            }
             <div className={`burger-menu ${menuOpen ? "open" : ""}`}>
                 <NavbarLinks onLinkClick={() => setMenuOpen(false)}/>
                 <button className="close" onClick={() => setMenuOpen(false)}> ❌</button>
             </div>
-            </>
-            }
+
         </nav>
 
         
