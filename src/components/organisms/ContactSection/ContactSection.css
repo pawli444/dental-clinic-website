@@ -86,6 +86,10 @@
 
 
 @media (max-width: 1024px) {
+
+  .cont-info-box{
+    background: white;
+  }
   .ContactSection {
     border-radius: 24px;
     background: white; 
@@ -104,9 +108,26 @@
     padding: 1.5rem;
     height: 300px;
   }
+
+
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .info-box--large h3 {
+    font-size: 1.2rem;
+  }
+  .info-box--large p {
+    font-size: 1.3rem;
+  }
+}
+
+
 @media (max-width: 768px) {
+
+  .cont-info-box{
+    background: white;
+  }
+
   .ContactSection {
     border-radius: 16px;
     margin: 0 1rem 5rem 1rem;
@@ -131,5 +152,31 @@
     border-radius: 0;
     padding: 1rem 1rem 1.5rem;
     height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cont-info-box {
+    border-radius: 12px;
+    margin: 0 0.5rem 3rem 0.5rem;
+    padding: 0.75rem;
+    background: white;
+  }
+  .contact-title {
+    font-size: 1.5rem;
+  }
+  .info-box {
+    padding: 0.75rem 0.5rem;
+  }
+  .info-box li {
+    padding: 0.75rem;
+  }
+  .info-box p {
+    font-size: 0.95rem;
+  }
+  .maps-box {
+    height: 200px;
+    padding: 0.75rem;
+    margin: 0 -0.75rem -0.75rem -0.75rem;
   }
 }

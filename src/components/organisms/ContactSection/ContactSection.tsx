@@ -19,7 +19,7 @@ function ContactSection(){
         </div>
         <div className="cont-info-box reveal">
             <div className="contact-info-wrapper">
-                <GabinetInformation/>
+                <GabinetInformation className="info-box--large"/>
                 <div className="maps-box">
                     {mapsUrl ? (
                         <iframe
