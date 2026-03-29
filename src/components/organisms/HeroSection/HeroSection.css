@@ -162,7 +162,6 @@
     transform: translateX(-50%);
     white-space: nowrap;
     padding: 1rem 1.4rem;
-
     font-size: 1.4rem;
   }
 
@@ -346,6 +345,12 @@
     top: 0px;
     left: 87px;
   }
+
+    .badge {
+    left: 40%;
+    padding: 0.75rem 0.75rem;
+    font-size: 1rem;
+  }
 }
 
 
@@ -359,15 +364,15 @@
   }
 
   .main-circle {
-    width: 210px;
-    height: 210px;
+    width: 250px;
+    height: 250px;
   }
 
   .small-circle {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     top: 0px;
-    left: 75px;
+    left: 70px;
   }
 }
 
