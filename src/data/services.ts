@@ -11,6 +11,12 @@ import offerProtetyka from "../assets/offer/protetyka.webp"
 import offerDzieci from "../assets/offer/stomatologia-dziecieca.webp"
 import offerHigienizacja from "../assets/offer/higienizacja.webp"
 import offerKonsultacje from "../assets/offer/konsultacje.webp"
+import offerProfilaktykaPhone from "../assets/offer/width-ones/profilaktykaPhone.webp"
+import offerLeczeniePhone from "../assets/offer/width-ones/leczenie-zachowawczePhone.webp"
+import offerProtetykaPhone from "../assets/offer/width-ones/protektykaPhone.webp"
+import offerDzieciPhone from "../assets/offer/width-ones/stomatologia-dzieciecaPhone.webp"
+import offerHigienizacjaPhone from "../assets/offer/width-ones/higienizacjaPhone.webp"
+import offerKonsultacjePhone from "../assets/offer/width-ones/konsultacjePhone.webp"
 
 
 
@@ -29,6 +35,7 @@ export type ExtendedService = Service & {
   scope: string[]
   why: string
   forWho: string
+  mobileImageURL?: string
 }
 
 export const extendedServices: ExtendedService[] = [
@@ -46,6 +53,8 @@ export const extendedServices: ExtendedService[] = [
     why: "Profilaktyka pozwala zapobiegać próchnicy i chorobom dziąseł oraz utrzymać zdrowy uśmiech przez długie lata.",
     forWho: "Dla dzieci i dorosłych, którzy chcą zadbać o zdrowie swoich zębów.",
     imageURL: offerProfilaktyka
+    ,
+    mobileImageURL: offerProfilaktykaPhone
   },
 
   {
@@ -62,6 +71,8 @@ export const extendedServices: ExtendedService[] = [
     why: "Szybka reakcja pozwala uniknąć poważniejszych problemów i bardziej zaawansowanego leczenia.",
     forWho: "Dla osób z bólem, nadwrażliwością lub widocznymi ubytkami.",
     imageURL: offerLeczenie
+    ,
+    mobileImageURL: offerLeczeniePhone
   },
 
   {
@@ -78,6 +89,8 @@ export const extendedServices: ExtendedService[] = [
     why: "Uzupełnienie braków w uzębieniu poprawia komfort życia i zapobiega dalszym problemom zdrowotnym.",
     forWho: "Dla osób z brakami w uzębieniu lub zębami wymagającymi odbudowy.",
     imageURL: offerProtetyka
+    ,
+    mobileImageURL: offerProtetykaPhone
   },
 
   {
@@ -94,6 +107,8 @@ export const extendedServices: ExtendedService[] = [
     why: "Wczesna profilaktyka i leczenie pomagają uniknąć problemów w przyszłości.",
     forWho: "Dla dzieci oraz rodziców dbających o zdrowie swoich pociech.",
     imageURL: offerDzieci
+    ,
+    mobileImageURL: offerDzieciPhone
   },
 
   {
@@ -110,6 +125,8 @@ export const extendedServices: ExtendedService[] = [
     why: "Regularne zabiegi pomagają utrzymać świeży oddech i zapobiegają chorobom dziąseł.",
     forWho: "Dla osób, które chcą zadbać o estetykę i higienę jamy ustnej.",
     imageURL: offerHigienizacja
+    ,
+    mobileImageURL: offerHigienizacjaPhone
   },
 
   {
@@ -126,6 +143,8 @@ export const extendedServices: ExtendedService[] = [
     why: "Dokładna diagnoza pozwala dobrać najlepsze i najbardziej skuteczne rozwiązania.",
     forWho: "Dla każdego, kto chce sprawdzić stan swojego uzębienia lub zaplanować leczenie.",
     imageURL: offerKonsultacje
+    ,
+    mobileImageURL: offerKonsultacjePhone
   }
 ];
 

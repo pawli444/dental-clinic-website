@@ -10,4 +10,5 @@ export interface ExtendedService extends Service {
   scope: string[]
   why: string
   forWho: string
+  mobileImageURL?: string
 }

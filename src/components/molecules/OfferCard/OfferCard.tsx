@@ -5,7 +5,7 @@ import type { ExtendedService } from "../../../types/index"
 import useInView from "../../../hooks/useInView";
 
 
-function OfferCard({ id, name, description, imageURL, longDescription, scope, why, forWho  }: ExtendedService){
+function OfferCard({ id, name, description, imageURL, longDescription, scope, why, forWho, mobileImageURL  }: ExtendedService){
 
     const ref = useInView<HTMLDivElement>();
 
@@ -14,7 +14,14 @@ function OfferCard({ id, name, description, imageURL, longDescription, scope, wh
             <div id={`service-${id}`} ref={ref} className={`offercard-box ${id%2==0 ? "right" : "left"}`}>
                 
                 <div className="offer-img-box image-reveal">
-                    <img src={imageURL} alt={description}/>
+                        {mobileImageURL ? (
+                            <picture>
+                                <source media="(max-width: 768px)" srcSet={mobileImageURL} />
+                                <img src={imageURL} alt={description} />
+                            </picture>
+                        ) : (
+                            <img src={imageURL} alt={description} />
+                        )}
                 </div>
 
                 <div className="offer-content-wrapper">
