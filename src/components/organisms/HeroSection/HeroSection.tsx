@@ -22,7 +22,7 @@ function Hero() {
           Komfort, któremu możesz zaufać.
         </p>
 
-          <NavLink to="kontact">
+          <NavLink to="kontakt">
             <button className="cta reveal" style={{ transitionDelay: "0.18s" }}>
               Umów wizytę
             </button>

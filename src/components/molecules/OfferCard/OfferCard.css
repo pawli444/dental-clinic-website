@@ -75,13 +75,23 @@
     margin: 0.4rem;
     border-radius: 3rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.144);
-    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    transition: box-shadow 0.25s ease, transform 0.25s ease, opacity 0.65s ease;
     
 }
 
 .scope-items li:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
     transform: translateY(-2px);
+}
+
+.scope-items li.reveal p {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transition-delay: calc(var(--delay, 0s) + 0.2s);
+}
+
+.is-visible .scope-items li.reveal p {
+  opacity: 1;
 }
 
 .scope-items p{
@@ -100,6 +110,8 @@
     color: rgba(0, 0, 0, 0.616);
     
 }
+
+
 
 @media (max-width: 1024px) {
   .offercard-box img {
