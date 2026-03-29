@@ -23,7 +23,8 @@ function ContactForm() {
 
   return (
     <>
-      <section ref={ref} className="ContactFormSection">
+     <section ref={ref}>
+      <div className="ContactFormSection reveal" style={{transitionDelay: "0.19s"}}>
 
         <h2 className="reveal" style={{transitionDelay: "0.15s"}}>Umów wizytę</h2>
 
@@ -66,7 +67,8 @@ function ContactForm() {
             />
           </div>
         )}
-      </section>
+      </div>
+    </section>
     </>
   )
 }

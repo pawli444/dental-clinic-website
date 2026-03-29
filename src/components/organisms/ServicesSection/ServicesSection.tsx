@@ -5,6 +5,7 @@ import Card from "../../molecules/ServiceCard/ServiceCard"
 import services from "../../../data/services"
 
 import useInView from "../../../hooks/useInView"
+import { Link } from "react-router-dom"
 
 function ServicesSection(){
 
@@ -22,11 +23,14 @@ function ServicesSection(){
             <div className="cards-wrapper">
 
                 {services.map((item, i) => (
-               <div key={item.id} className="card-item reveal image-reveal" 
-               style={{ transitionDelay: `${0.25 + i * 0.06}s` }}
+               <Link
+                 key={item.id}
+                 to={`/uslugi#service-${item.id}`}
+                 className="card-item reveal image-reveal"
+                 style={{ transitionDelay: `${0.25 + i * 0.06}s` }}
                >
                     <Card id={item.id} name={item.name} description={item.description} imageURL={item.imageURL} />
-                </div>
+                </Link>
                 ))}
             </div>
           </section>

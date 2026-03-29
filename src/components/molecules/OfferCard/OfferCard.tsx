@@ -11,7 +11,7 @@ function OfferCard({ id, name, description, imageURL, longDescription, scope, wh
 
     return(
         <>
-            <div ref={ref} className={`offercard-box ${id%2==0 ? "right" : "left"}`}>
+            <div id={`service-${id}`} ref={ref} className={`offercard-box ${id%2==0 ? "right" : "left"}`}>
                 
                 <div className="offer-img-box image-reveal">
                     <img src={imageURL} alt={description}/>
