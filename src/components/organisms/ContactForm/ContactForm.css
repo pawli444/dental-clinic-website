@@ -139,6 +139,12 @@
   display: block;
 }
 
+.error {
+  color: #d64545;
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+}
+
 
 
 @media (max-width: 768px) {
