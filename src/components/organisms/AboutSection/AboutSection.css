@@ -51,71 +51,35 @@
     color: rgba(0, 0, 0, 0.616);
 }
 
-.about-image-box{
 
-    width: 100%;
-    border: 1 px solid blue;
-    width: 400px;
+.about-image-box{
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-image-box img{
-    width: 100%;
-    border-radius: 100px;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 100px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 
 
-/* Tablet (max 1024px) */
 @media (max-width: 1024px) {
   .about-wrapper {
-    gap: 2rem;
-  }
-
-  .about-image-box {
-    width: 300px;
-  }
-
-  .about-text {
-    gap: 1.5rem;
-  }
-}
-
-/* Telefon (max 768px) */
-@media (max-width: 768px) {
-  .about-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image-box {
-    width: 250px;
-  }
-
-  .about-text {
-    flex-direction: column;
     gap: 2rem;
     align-items: center;
   }
 
-  .about-text li {
-    min-width: unset;
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .aboutSection h2 {
-    font-size: 1.8rem;
-  }
-}
-
-
-@media (max-width: 1024px) {
-  .about-wrapper {
-    gap: 2rem;
-  }
-
   .about-image-box {
-    width: 300px;
+    max-width: 320px;
   }
 
   .about-text {
@@ -124,29 +88,50 @@
 }
 
 
-@media (max-width: 768px) {
-  .about-wrapper {
-    flex-direction: column;
-    text-align: center;
+  @media (max-width: 768px) {
+    .about-wrapper {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    .about-image-box {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .about-image-box img {
+      border-radius: 80px;
+    }
+
+    .about-text {
+      flex-direction: column;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .about-text li {
+      min-width: unset;
+      width: 100%;
+      max-width: 340px;
+    }
+
+    .aboutSection h2 {
+      font-size: 1.8rem;
+    }
   }
 
-  .about-image-box {
-    width: 250px;
-  }
 
-  .about-text {
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-  }
+  @media (max-width: 480px) {
+    .about-image-box {
+      max-width: 220px;
+    }
 
-  .about-text li {
-    min-width: unset;
-    width: 100%;
-    max-width: 300px;
-  }
+    .about-text h3 {
+      font-size: 1.1rem;
+    }
 
-  .aboutSection h2 {
-    font-size: 1.8rem;
+    .about-text p {
+      font-size: 0.95rem;
+    }
   }
-}
