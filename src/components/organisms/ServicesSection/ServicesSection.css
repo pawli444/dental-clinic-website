@@ -48,6 +48,21 @@
     
 }
 
+.card-item {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+
+.cards-wrapper .reveal:nth-child(2) { transition-delay: 0.12s; }
+.cards-wrapper .reveal:nth-child(3) { transition-delay: 0.18s; }
+.cards-wrapper .reveal:nth-child(4) { transition-delay: 0.24s; }
+.cards-wrapper .reveal:nth-child(5) { transition-delay: 0.30s; }
+
+
+
+
 
 @media (max-width: 1024px) {
   .cards-wrapper {

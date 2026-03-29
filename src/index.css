@@ -11,3 +11,37 @@
 .hero {
   min-height: calc(100dvh - var(--navbar-height));
 }
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px) scale(0.995);
+  transition: opacity 0.58s ease, transform 0.58s cubic-bezier(.2,.9,.3,1);
+  will-change: opacity, transform;
+}
+
+.image-reveal {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.is-visible .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.is-visible .image-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .image-reveal {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
