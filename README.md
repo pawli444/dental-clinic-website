@@ -1,69 +1,63 @@
-# React + TypeScript + Vite
+# 🦷 Dental Clinic Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live website for a dental clinic built as a portfolio project.  
+React + TypeScript, plain CSS, Vite.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- Responsive design (mobile hamburger menu)
+- Image slideshow with navigation (arrows + dots)
+- Services section with cards
+- Contact section with embedded Google Maps
+- Booking CTA with tel: link
+- Environment-based config (no hardcoded clinic data)
 
-## Expanding the ESLint configuration
+## 🛠️ Stack
+- React 19 + TypeScript
+- React Router v7
+- Vite 7
+- CSS
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting started
+```bash
+git clone https://github.com/pawli444/dental-clinic-website.git
+cd dental-clinic-website
+npm install
+cp .env.example .env.local
+# fill in .env.local
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ⚙️ Environment variables
+See `.env.example` - copy to `.env.local` and fill in:
 ```
+- VITE_CLINIC_NAME — clinic display name (used in nav/logo alt text)
+- VITE_CLINIC_PHONE — main phone number (CTA, tel: link)
+- VITE_CLINIC_ADDRESS — clinic address (Contact page)
+- VITE_CLINIC_DENTIST — dentist / owner name (used in index.html meta)
+- VITE_REGISTERED — registration/company number (Footer/meta)
+- VITE_MAPS_EMBED_URL — full maps iframe src (Google Maps or other embed URL)
+- VITE_CONTACT_FORM_URL — optional: URL to submit contact form (if not set, code uses the 
+```
+
+Notes:
+- `index.html` contains `%VITE_CLINIC_*%` tokens which Vite replaces at build time — ensure values exist when building for production.
+- `VITE_` vars are public. Do not include server secrets here.
+
+### Example `.env.example`
+```text
+# Copy this file to .env.local and fill the values (do NOT commit .env.local)
+
+VITE_CLINIC_NAME=Your Clinic Name
+VITE_CLINIC_PHONE=+48 123 456 789
+VITE_CLINIC_ADDRESS=Street 1, City
+VITE_CLINIC_DENTIST=Dr. Name Surname
+VITE_REGISTERED=Registration/Company number
+VITE_MAPS_EMBED_URL=https://www.google.com/maps/embed?pb=... (full embed src)
+```
+## Scripts
+- `npm run dev` — start dev server (vite)
+- `npm run build` — runs `tsc -b` then `vite build`
+- `npm run preview` — preview production build (`vite preview`)
+- `npm run lint` — run eslint
