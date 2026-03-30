@@ -2,7 +2,8 @@ import { useEffect, useRef } from "react";
 
 type Options = IntersectionObserverInit;
 
-export default function useInView<T extends HTMLElement = HTMLElement>(options?: Options) {
+
+export default function useInView<T extends HTMLElement = HTMLElement>(options?: Options, isHome?: boolean) {
   const ref = useRef<T | null>(null);
 
   useEffect(() => {
@@ -11,10 +12,20 @@ export default function useInView<T extends HTMLElement = HTMLElement>(options?:
     if (!el) return;
 
     const isMobile = window.innerWidth <= 768;
-    const defaultOptions: Options = {
-      threshold: 0.2,
-      rootMargin: isMobile ? "0px 0px 00px 0px" : "0px 0px -80px 0px",
+
+    const resolvedIsHome = typeof isHome === "boolean" ? isHome : (typeof window !== "undefined" && window.location.pathname === "/");
+
+    const homeDefaults: Options = {
+      threshold: isMobile ? 0.1 : 0.15,
+      rootMargin: isMobile ? "0px 0px 0px 0px" : "0px 0px -40px 0px",
     };
+
+    const siteDefaults: Options = {
+      threshold: isMobile ? 0.2 : 0.26,
+      rootMargin: isMobile ? "0px 0px 0px 0px" : "0px 0px -80px 0px",
+    };
+
+    const defaultOptions: Options = resolvedIsHome ? homeDefaults : siteDefaults;
 
     const observerOptions: Options = { ...defaultOptions, ...(options || {}) };
 
@@ -29,7 +40,7 @@ export default function useInView<T extends HTMLElement = HTMLElement>(options?:
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [ref, options]);
+  }, [options, isHome]);
 
   return ref;
 }
